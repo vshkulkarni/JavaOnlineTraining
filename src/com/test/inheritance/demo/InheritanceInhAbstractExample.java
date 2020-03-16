@@ -3,15 +3,14 @@ package com.test.inheritance.demo;
 abstract class Circle { // we can have abstract method
 	abstract void drawCircle();
 
-	abstract void drawRadious();
+	abstract void drawRectangls();
 
 	void display() // instance method
 	{
 		System.out.println("this is the circle ");
 	}
 }
-
-abstract class Diagram extends Circle {
+abstract  class Diagram extends Circle {   //partialy inheritance   
 
 	@Override
 	void drawCircle() {
@@ -21,12 +20,13 @@ abstract class Diagram extends Circle {
 
 }
 
+
 class NewDiagram extends Diagram
 {
 
 	@Override
-	void drawRadious() {
-		System.out.println("new Diagram");
+	void drawRectangls() {
+		System.out.println("draw recangle");
 		
 	}
 	
@@ -34,12 +34,14 @@ class NewDiagram extends Diagram
 
 
 
+
 public class InheritanceInhAbstractExample {
 	public static void main(String[] args) {
 
-		Circle obj = new NewDiagram();
+	Circle obj = new NewDiagram();
 		obj.drawCircle();
 		obj.display();
+		obj.drawRectangls();
 
 	}
 }
