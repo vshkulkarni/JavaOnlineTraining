@@ -1,12 +1,12 @@
 package com.test.string.demo;
 
 public class Employee {
-	int id;
-	String name;
+	private int id;
+	private  String name;
+	private String address;
 	
 	
 	public Employee(int id, String name) {
-		super();
 		this.id = id;
 		this.name = name;
 	}
@@ -22,6 +22,14 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+	
 	
 
 }
