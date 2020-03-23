@@ -10,7 +10,8 @@ public class NullPointerExample {
 
 	public static void main(String[] args) {
 		
-		
+		try
+		{
 		Employee emp=new Employee(101, "vishnu");
 		
 		List list=new ArrayList<>();
@@ -18,6 +19,11 @@ public class NullPointerExample {
 		
 		list=Arrays.asList(emp.getAddress());
 		System.out.println(list);
+		}
+		catch(ArrayIndexOutOfBoundsException|NullPointerException e)  //multi catch  //java8
+		{
+			
+		}
 	}
 
 }

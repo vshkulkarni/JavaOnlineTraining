@@ -1,37 +1,34 @@
 package com.test.exception.demo;
 
-
 public class ExceptionDemo {
 
 	public static void main(String[] args) {
-		
 
-		try
-		{
-		int value=100;
-		System.out.println(value/0);
-		}
-		catch(NullPointerException|ArrayIndexOutOfBoundsException e)
-		{
-			System.out.println("Please enter greate than zero value"+e);
-		}
-		finally
-		{
-			System.out.println("finally block get called ");
-		}
-		
-		
-		
+		ThrowExample obj = new ThrowExample();
+		obj.display();
 
 	}
 
 }
 
-class ThrowExample
-{
-	public void display() throws Exception  //called    //calling method should handle this error 
+class ThrowExample {
+	int value = 100;
+
+	public void display()  // this method having some critical code ,that should implement implement //
+							// exception
 	{
-	System.out.println("test");	
+		if (value == 500) {
+
+		} else if (value == 250) {
+
+		} else if (value == 100) {
+			System.out.println("Exception throw");
+			try {
+				throw new MyException("Mu Exception");
+			} catch (Exception e) {
+				e.printStackTrace();
+			} // particular point i need to raise
+		}
 	}
-	
+
 }
