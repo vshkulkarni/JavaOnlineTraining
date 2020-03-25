@@ -3,7 +3,7 @@ package com.test.exception.demo;
 class MyException extends Exception {
 
 	public MyException(String str) {
-		
+		super(str);
 	}
 
 }
@@ -16,7 +16,7 @@ public class UserDefinedException {
 			throw new MyException("My exception");   //throw exception
 			
 		} catch (MyException exObj) {
-			System.out.println("exception caught" + exObj);
+			exObj.printStackTrace();
 		}
 
 	}

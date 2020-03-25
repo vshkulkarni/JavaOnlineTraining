@@ -24,7 +24,7 @@ class ThrowExample {
 		} else if (value == 100) {
 			System.out.println("Exception throw");
 			try {
-				throw new MyException("Mu Exception");
+				throw new MyException("My Exception");
 			} catch (Exception e) {
 				e.printStackTrace();
 			} // particular point i need to raise
