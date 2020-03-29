@@ -12,8 +12,8 @@ public class NullPointerExample {
 		
 		try
 		{
-		Employee emp=new Employee(101, "vishnu");
-		
+		Employee emp=new Employee(101, "vishnu","1000");
+	
 		List list=new ArrayList<>();
 	//	System.out.println(emp.getId()+"--" +emp.getName()+emp.getAddress());
 		

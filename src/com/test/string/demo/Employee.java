@@ -1,15 +1,25 @@
 package com.test.string.demo;
 
-public class Employee {
+public class Employee  extends Person
+{
 	private int id;
 	private  String name;
 	private String address;
-	
-	
-	public Employee(int id, String name) {
+	private String salary;
+
+	/*public Employee(int id, String name) {
 		this.id = id;
 		this.name = name;
+	}*/
+	
+	public Employee(int id, String name, String salary) {
+		super(name);
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		
 	}
+
 	public int getId() {
 		return id;
 	}
@@ -27,6 +37,14 @@ public class Employee {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public String getSalary() {
+		return salary;
+	}
+
+	public void setSalary(String salary) {
+		this.salary = salary;
 	}
 	
 	
