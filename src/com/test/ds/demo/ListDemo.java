@@ -1,7 +1,9 @@
 package com.test.ds.demo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 import com.test.string.demo.Employee;
 
@@ -17,15 +19,25 @@ public class ListDemo {
 		list.add(emp);
 		list.add(emp1);
 		list.add(emp2);
-		list.add(emp3);   //50 
+		list.add(emp3);
+
 		for (Employee empIterate : list) {
 			System.out.println(empIterate.getId());
 			System.out.println(empIterate.getName());
+		}
 
+		Iterator<Employee> iterator = list.iterator();
+		while (iterator.hasNext()) {
+			System.out.println("--" + iterator.next());
 		}
 		
-		
+		ListIterator<Employee> listIterator = list.listIterator();  //forward and backward direction 
+		while (listIterator.hasPrevious()) {
+			System.out.println("--" + listIterator.previous());
+		}
 
 	}
+	
+//List Set LinkedList   --  Legacy  Vector 
 
 }
