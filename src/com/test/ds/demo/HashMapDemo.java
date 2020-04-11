@@ -1,5 +1,6 @@
 package com.test.ds.demo;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -11,6 +12,8 @@ public class HashMapDemo {
 		map.put(102, "ABC");
 		map.put(106, "XYZ");
 		map.put(10, "Test");
+		
+		Collections.synchronizedMap(map);
 
 		System.out.println(map.keySet());
 		System.out.println(map.values());
